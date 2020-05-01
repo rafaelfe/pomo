@@ -1,0 +1,284 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 19702,
+	"name": "pomo",
+	"runtime": "c3",
+	"useWorker": false,
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NodeWebkit",
+			"name": "NW.js",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "2qpwtbcu5boih",
+	"objectTypes": {
+		"items": [
+			"spBar",
+			"txSessionTimer",
+			"spBarBG",
+			"NWjs",
+			"Browser",
+			"btCloseSprite",
+			"Mouse",
+			"btClose",
+			"btPlayStop",
+			"spMoveBar",
+			"spBarTipLeft",
+			"spBarTipRight",
+			"spBtStartStop",
+			"txSessionCounter",
+			"Audio",
+			"imgClock",
+			"spCloseButton",
+			"Sprite2",
+			"spMenuTrigger"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"appLayout"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"appEvents"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "alarm.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 839883645880875
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "roboto-light-webfont.ttf",
+					"type": "application/font-sfnt",
+					"sid": 107891384460194
+				},
+				{
+					"name": "roboto-light-webfont.woff",
+					"type": "application/font-woff",
+					"sid": 124780950970908
+				},
+				{
+					"name": "roboto-light-webfont.woff2",
+					"type": "font/woff2",
+					"sid": 805511709434287
+				},
+				{
+					"name": "robotocondensed-light-webfont.woff",
+					"type": "application/font-woff",
+					"sid": 270812189680861
+				},
+				{
+					"name": "robotocondensed-light-webfont.woff2",
+					"type": "font/woff2",
+					"sid": 571242681318485
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 182986791844474
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 477798461449711
+				},
+				{
+					"name": "icon-114.png",
+					"type": "image/png",
+					"sid": 465364453714005
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 724316984070331
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 871369380315196
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 540304937571595
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "robotoLight.css",
+					"type": "text/css",
+					"sid": 638385240987140
+				},
+				{
+					"name": "robotoCondensedLight.css",
+					"type": "text/css",
+					"sid": 858802154214342
+				}
+			],
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "font"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "po:mo, a minimalistic pomodoro app",
+		"version": "0.1",
+		"author": "rafaelfe",
+		"authorEmail": "r@rafaelfe.com",
+		"authorWebsite": "http://rafaelfe.com",
+		"appId": "com.rafaelfe.pomo",
+		"pixelRounding": false,
+		"useLoaderLayout": false,
+		"fullscreenMode": "scale-inner",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useHighDpi": true,
+		"orientations": "any",
+		"enableWebGL": true,
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "none",
+		"preloadSounds": false,
+		"clearBackground": true,
+		"enhancedAccelerationPrecision": true
+	},
+	"viewportWidth": 600,
+	"viewportHeight": 70,
+	"firstLayout": null
+}

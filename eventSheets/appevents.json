@@ -1,0 +1,1090 @@
+{
+	"name": "appEvents",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "oldMouseY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 832457143053999
+		},
+		{
+			"eventType": "variable",
+			"name": "oldMouseX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 587767543549070
+		},
+		{
+			"eventType": "variable",
+			"name": "moveWindow",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 669223335819732
+		},
+		{
+			"eventType": "variable",
+			"name": "btStartStop",
+			"type": "string",
+			"initialValue": "Stopped",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 949117604362409
+		},
+		{
+			"eventType": "variable",
+			"name": "sessionCounter",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 826012458171279
+		},
+		{
+			"eventType": "variable",
+			"name": "barWidth",
+			"type": "number",
+			"initialValue": "500",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 709838329596538
+		},
+		{
+			"eventType": "variable",
+			"name": "barInitialWidth",
+			"type": "number",
+			"initialValue": "112",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 511102253138867
+		},
+		{
+			"eventType": "variable",
+			"name": "counter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465411987369534
+		},
+		{
+			"eventType": "variable",
+			"name": "switch",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 594067210472049
+		},
+		{
+			"eventType": "variable",
+			"name": "widthIncreaser",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 148725313372965
+		},
+		{
+			"eventType": "variable",
+			"name": "sessionTime",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 868425943236102
+		},
+		{
+			"eventType": "variable",
+			"name": "breakTime",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 489675851722080
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Global Variables",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 618840129618417
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "STARTUP",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 390597785075496
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 363103267703227,
+							"parameters": {
+								"variable": "sessionTime",
+								"value": "sessionTime*60"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 738130547060381,
+							"parameters": {
+								"variable": "breakTime",
+								"value": "breaktime*60"
+							}
+						},
+						{
+							"id": "set-always-on-top",
+							"objectClass": "NWjs",
+							"sid": 677210379967545,
+							"parameters": {
+								"mode": "always-on-top"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 762169487893066,
+							"parameters": {
+								"variable": "counter",
+								"value": "sessionTime"
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "btClose",
+							"sid": 176559192156045,
+							"parameters": {
+								"property-name": "\"opacity\"",
+								"value": "\"0\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "btPlayStop",
+							"sid": 139948344011349,
+							"parameters": {
+								"property-name": "\"opacity\"",
+								"value": "\"0\""
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "spBar",
+							"sid": 538404584069775,
+							"parameters": {
+								"width": "barInitialWidth"
+							}
+						},
+						{
+							"id": "set-web-font",
+							"objectClass": "txSessionTimer",
+							"sid": 453146519531551,
+							"disabled": true,
+							"parameters": {
+								"family-name": "\"robotolight\"",
+								"css-url": "\"robotoLight.css\""
+							}
+						},
+						{
+							"id": "set-web-font",
+							"objectClass": "txSessionCounter",
+							"sid": 448586366810715,
+							"disabled": true,
+							"parameters": {
+								"family-name": "\"roboto_condensedlight\"",
+								"css-url": "\"robotoCondensedLight.css\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txSessionTimer",
+							"sid": 149753168904832,
+							"parameters": {
+								"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "txSessionCounter",
+							"sid": 665982041397293,
+							"disabled": true,
+							"parameters": {
+								"opacity": "20"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "spBtStartStop",
+							"sid": 362563830790131
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "spMoveBar",
+							"sid": 407295378883501,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "spCloseButton",
+							"sid": 286507189832700,
+							"disabled": true,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Sprite2",
+							"sid": 283230483230164,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "spMenuTrigger",
+							"sid": 188882708523105,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 792952735177974
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 273353963906071
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "spBarTipLeft",
+							"sid": 855506496266624,
+							"parameters": {
+								"x": "spBar.ImagePointX(1)-1",
+								"y": "spBar.ImagePointY(1)"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "txSessionTimer",
+							"sid": 806839383434660,
+							"parameters": {
+								"x": "spBar.ImagePointX(1) -35",
+								"y": "spBar.ImagePointY(1)+11"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "imgClock",
+							"sid": 149270207565124,
+							"parameters": {
+								"x": "spBar.ImagePointX(1) -25",
+								"y": "spBar.ImagePointY(1)+12"
+							}
+						}
+					],
+					"sid": 677643126097604
+				}
+			],
+			"sid": 138630060184886
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DRAG WINDOW",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 346066223350029
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 594081853513739,
+							"parameters": {
+								"variable": "oldMouseX",
+								"value": "Mouse.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 150596709198867,
+							"parameters": {
+								"variable": "oldMouseY",
+								"value": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 678244794419434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 361110982365571,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 283039978248391,
+							"parameters": {
+								"object": "spMoveBar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 471593549700125,
+							"parameters": {
+								"variable": "moveWindow",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 585872469523384
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 918387932456717,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 588325955111595,
+							"parameters": {
+								"variable": "moveWindow",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 427035179388265
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 930379759573080,
+							"parameters": {
+								"variable": "moveWindow",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "NWjs",
+							"sid": 402124302338148,
+							"parameters": {
+								"x": "(NWjs.WindowX+oldMouseX)-(LayoutWidth/2)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "NWjs",
+							"sid": 132522592156167,
+							"parameters": {
+								"y": "(NWjs.WindowY+oldMouseY)-10"
+							}
+						}
+					],
+					"sid": 462857160730798
+				}
+			],
+			"sid": 266268726724406
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CLOSE WINDOW",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 615403422839060,
+							"parameters": {
+								"object": "spCloseButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "btPlayStop",
+							"sid": 936044697269130,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 376214616166232,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 378825933574077
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "btPlayStop",
+							"sid": 359304319011949,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 594010765558019
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 195804653546505,
+							"parameters": {
+								"object": "spMenuTrigger"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 339462602338449,
+							"parameters": {
+								"object": "spCloseButton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 950700948228180
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 237910331535085,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 638445713434023,
+							"parameters": {
+								"object": "spCloseButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "execute-javascript",
+							"objectClass": "Browser",
+							"sid": 534289564793752,
+							"parameters": {
+								"javascript": "\"window.close()\""
+							}
+						}
+					],
+					"sid": 690391119386271
+				}
+			],
+			"sid": 705476673159922
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PLAY / STOP",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "btPlayStop",
+							"sid": 684806551242009
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 668292903593837,
+							"parameters": {
+								"variable": "btStartStop",
+								"comparison": 0,
+								"value": "\"Stopped\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 563851807882794,
+							"parameters": {
+								"variable": "switch",
+								"value": "\"Session\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spBtStartStop",
+							"sid": 967209657179005,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 466744690567836,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 860237138747805,
+							"parameters": {
+								"variable": "btStartStop",
+								"value": "\"Started\""
+							}
+						}
+					],
+					"sid": 668372777786027
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "btPlayStop",
+							"sid": 767687901549706
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 109011592107423,
+							"parameters": {
+								"variable": "btStartStop",
+								"comparison": 0,
+								"value": "\"Started\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 111739072553237,
+							"parameters": {
+								"variable": "switch",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spBtStartStop",
+							"sid": 357564013822007,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 379039002641220,
+							"parameters": {
+								"variable": "btStartStop",
+								"value": "\"Stopped\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 764097861376590,
+							"parameters": {
+								"variable": "switch",
+								"value": "\"Stopped\""
+							}
+						}
+					],
+					"sid": 294130482402619
+				}
+			],
+			"sid": 216406815789387
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SESSION",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 882042096369197,
+							"parameters": {
+								"variable": "switch",
+								"comparison": 0,
+								"value": "\"Session\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 156488062853460,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 181753039640691
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 742334994039184,
+									"parameters": {
+										"variable": "widthIncreaser",
+										"value": "(barWidth-barInitialWidth)/sessionTime"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 836372160940506,
+									"parameters": {
+										"variable": "counter",
+										"value": "sessionTime+0.99"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "spBar",
+									"sid": 619347010834738,
+									"parameters": {
+										"width": "barInitialWidth-widthIncreaser"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txSessionCounter",
+									"sid": 837097237528606,
+									"parameters": {
+										"text": "\"FOCUS \" & sessionCounter"
+									}
+								}
+							],
+							"sid": 813458982691671
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 842703115087563,
+									"parameters": {
+										"interval-seconds": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "spBar",
+									"sid": 876147350047014,
+									"parameters": {
+										"width": "spBar.Width+widthIncreaser"
+									}
+								}
+							],
+							"sid": 473844208744474
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929103818922961,
+									"parameters": {
+										"variable": "counter",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 307400530440598,
+									"parameters": {
+										"variable": "switch",
+										"value": "\"Break\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 884087890486137,
+									"parameters": {
+										"audio-file": "alarm",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 310606284409464
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "txSessionTimer",
+									"sid": 573044731132424,
+									"parameters": {
+										"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 961723537040025,
+									"parameters": {
+										"variable": "counter",
+										"value": "min(sessionTime+1,counter-dt)"
+									}
+								}
+							],
+							"sid": 672126664394417
+						}
+					]
+				}
+			],
+			"sid": 787453046295202
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BREAK",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 997063975810164,
+							"parameters": {
+								"variable": "switch",
+								"comparison": 0,
+								"value": "\"Break\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 291675925731878,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 711358384579322
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 190866662521269,
+									"parameters": {
+										"variable": "sessionCounter",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 366922780781951,
+									"parameters": {
+										"variable": "widthIncreaser",
+										"value": "(barWidth-barInitialWidth)/breakTime"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 634329472408969,
+									"parameters": {
+										"variable": "counter",
+										"value": "breakTime+1"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "spBar",
+									"sid": 882749119392643,
+									"parameters": {
+										"width": "barInitialWidth-widthIncreaser"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "txSessionCounter",
+									"sid": 323069563732054,
+									"parameters": {
+										"text": "\"BREAK\""
+									}
+								}
+							],
+							"sid": 159586039187909
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 353393566594408,
+									"parameters": {
+										"interval-seconds": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "spBar",
+									"sid": 589726906690225,
+									"parameters": {
+										"width": "spBar.Width+widthIncreaser"
+									}
+								}
+							],
+							"sid": 396230019081054
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 368228948471975,
+									"parameters": {
+										"variable": "counter",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 707888396468220,
+									"parameters": {
+										"variable": "switch",
+										"value": "\"Session\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 881537850783668,
+									"parameters": {
+										"audio-file": "alarm",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 630859208611167
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "txSessionTimer",
+									"sid": 441986115704922,
+									"parameters": {
+										"text": "zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 295301598875653,
+									"parameters": {
+										"variable": "counter",
+										"value": "min(breakTime+1,counter-dt)"
+									}
+								}
+							],
+							"sid": 963804204856689
+						}
+					]
+				}
+			],
+			"sid": 141107387160158
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "STOPPED",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 357538458149671,
+							"parameters": {
+								"variable": "switch",
+								"comparison": 0,
+								"value": "\"Stopped\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 714988716616887,
+							"parameters": {
+								"variable": "counter",
+								"value": "sessionTime+1"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "spBar",
+							"sid": 937445650227400,
+							"parameters": {
+								"width": "barInitialWidth"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "txSessionTimer",
+							"sid": 803869475462453,
+							"parameters": {
+								"text": " zeropad(int(sessionTime/60% 60), 1) & \":\" & zeropad(int(sessionTime%60), 2)"
+							}
+						}
+					],
+					"sid": 937614078765331
+				}
+			],
+			"sid": 236118510440609
+		}
+	],
+	"sid": 372758656478851
+}
