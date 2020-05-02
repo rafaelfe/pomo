@@ -1,0 +1,57 @@
+{
+	"name": "sp_bt_close_idle",
+	"plugin-id": "Sprite",
+	"sid": 224257542592643,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7227808,
+						"collisionPoly": {
+							"points": [
+								0.265625,
+								0.265625,
+								0.5,
+								0.453125,
+								0.71875,
+								0.265625,
+								0.53125,
+								0.5,
+								0.703125,
+								0.703125,
+								0.5,
+								0.546875,
+								0.28125,
+								0.703125,
+								0.453125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 465466142655258,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,189 @@
+{
+	"name": "event_main",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Draw Bars",
+			"description": "Draws the resizable and background bars",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 540332852337428
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Draw background static bar"
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 795051941841611,
+							"parameters": {
+								"x": "112",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 444114054402106,
+							"parameters": {
+								"x": "112",
+								"y": "48",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 360339529091012,
+							"parameters": {
+								"x": "LayoutWidth-16",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 742751709026547,
+							"parameters": {
+								"x": "LayoutWidth-16",
+								"y": "LayoutHeight-16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 431932364602441,
+							"parameters": {
+								"left": "112",
+								"top": "8",
+								"right": "LayoutWidth-16",
+								"bottom": "LayoutHeight-8",
+								"color": "rgba255(44,44,44,255)"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 373660197386782,
+							"parameters": {
+								"left": "104",
+								"top": "16",
+								"right": "LayoutWidth-8",
+								"bottom": "LayoutHeight-16",
+								"color": "rgba255(44,44,44,255)"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Draw moving bar"
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 973269405143315,
+							"parameters": {
+								"x": "112",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(252,51,103,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 940620244605937,
+							"parameters": {
+								"x": "112",
+								"y": "48",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(252,51,103,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 977292008204141,
+							"parameters": {
+								"x": "264",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(252,51,103,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 452092889735339,
+							"parameters": {
+								"x": "264",
+								"y": "48",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(252,51,103,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 793338170857112,
+							"parameters": {
+								"left": "112",
+								"top": "8",
+								"right": "264",
+								"bottom": "56",
+								"color": "rgba255(252,51,103,255)"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 225770019335603,
+							"parameters": {
+								"left": "104",
+								"top": "16",
+								"right": "272",
+								"bottom": "48",
+								"color": "rgba255(252,51,103,255)"
+							}
+						}
+					],
+					"sid": 944375317673562
+				}
+			],
+			"sid": 715034272781740
+		}
+	],
+	"sid": 826471864967443
+}
