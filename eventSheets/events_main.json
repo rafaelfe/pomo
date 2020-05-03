@@ -5,7 +5,7 @@
 			"eventType": "group",
 			"disabled": false,
 			"title": "Draw Bars",
-			"description": "Draws the resizable and background bars",
+			"description": "Draws the background bar",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -206,18 +206,18 @@
 						{
 							"id": "set-position",
 							"objectClass": "tx_session_timer",
-							"sid": 806839383434660,
+							"sid": 339333276509254,
 							"parameters": {
-								"x": "sp_bar.ImagePointX(1) -35",
+								"x": "sp_bar.ImagePointX(1) -45",
 								"y": "sp_bar.ImagePointY(1)+11"
 							}
 						},
 						{
 							"id": "set-position",
 							"objectClass": "sp_clock",
-							"sid": 317898787410639,
+							"sid": 735577113002051,
 							"parameters": {
-								"x": "sp_bar.ImagePointX(1) -32",
+								"x": "sp_bar.ImagePointX(1) -36",
 								"y": "sp_bar.ImagePointY(1)+8"
 							}
 						}

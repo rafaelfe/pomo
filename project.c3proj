@@ -167,6 +167,21 @@
 					"name": "robotocondensed-light-webfont.woff2",
 					"type": "font/woff2",
 					"sid": 571242681318485
+				},
+				{
+					"name": "RobotoMono-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 368789576298420
+				},
+				{
+					"name": "RobotoMono-Thin.ttf",
+					"type": "application/font-sfnt",
+					"sid": 156330063480682
+				},
+				{
+					"name": "RobotoMono-Light.ttf",
+					"type": "application/font-sfnt",
+					"sid": 355820044490023
 				}
 			],
 			"subfolders": []

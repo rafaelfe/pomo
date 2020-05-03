@@ -115,7 +115,7 @@
 			"eventType": "variable",
 			"name": "breakTime",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

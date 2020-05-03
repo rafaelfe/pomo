@@ -18,25 +18,17 @@
 						"originalSource": "C:\\Users\\Rafael\\Dropbox\\Public\\pomo\\sprites\\imgClock.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1891688,
+						"imageSpriteId": 2297706,
 						"collisionPoly": {
 							"points": [
-								0.146809,
-								0.146809,
-								0.489362,
 								0,
-								0.831915,
-								0.146809,
-								0.978723,
-								0.489362,
-								0.831915,
-								0.831915,
-								0.489362,
-								0.978723,
-								0.146809,
-								0.831915,
 								0,
-								0.489362
+								1,
+								0,
+								0.9971590909090909,
+								0.9943181818181818,
+								0,
+								1
 							]
 						},
 						"useCollisionPoly": true,
