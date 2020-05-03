@@ -1,0 +1,8 @@
+{
+	"name": "btPlayStop",
+	"plugin-id": "Button",
+	"sid": 113025237126523,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

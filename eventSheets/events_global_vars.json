@@ -1,0 +1,126 @@
+{
+	"name": "events_global_vars",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "oldMouseY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 832457143053999
+		},
+		{
+			"eventType": "variable",
+			"name": "oldMouseX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 587767543549070
+		},
+		{
+			"eventType": "variable",
+			"name": "moveWindow",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 669223335819732
+		},
+		{
+			"eventType": "variable",
+			"name": "btStartStop",
+			"type": "string",
+			"initialValue": "Stopped",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 949117604362409
+		},
+		{
+			"eventType": "variable",
+			"name": "sessionCounter",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 826012458171279
+		},
+		{
+			"eventType": "variable",
+			"name": "barWidth",
+			"type": "number",
+			"initialValue": "500",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 709838329596538
+		},
+		{
+			"eventType": "variable",
+			"name": "barInitialWidth",
+			"type": "number",
+			"initialValue": "112",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 511102253138867
+		},
+		{
+			"eventType": "variable",
+			"name": "counter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465411987369534
+		},
+		{
+			"eventType": "variable",
+			"name": "switch",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 594067210472049
+		},
+		{
+			"eventType": "variable",
+			"name": "widthIncreaser",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 148725313372965
+		},
+		{
+			"eventType": "variable",
+			"name": "sessionTime",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 868425943236102
+		},
+		{
+			"eventType": "variable",
+			"name": "breakTime",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 489675851722080
+		}
+	],
+	"sid": 737218647593982
+}

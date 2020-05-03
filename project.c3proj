@@ -1,19 +1,11 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 19702,
-	"name": "pomo",
+	"name": "abcd",
 	"runtime": "c3",
-	"useWorker": true,
+	"useWorker": false,
 	"bundleAddons": false,
 	"usedAddons": [
-		{
-			"type": "plugin",
-			"id": "DrawingCanvas",
-			"name": "Drawing canvas",
-			"author": "Scirra",
-			"version": "r197.2",
-			"bundled": false
-		},
 		{
 			"type": "plugin",
 			"id": "Sprite",
@@ -21,15 +13,80 @@
 			"author": "Scirra",
 			"version": "r197.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NodeWebkit",
+			"name": "NW.js",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
 		}
 	],
-	"uniqueId": "xgqgwwceisl",
+	"uniqueId": "2qpwtbcu5boih",
 	"objectTypes": {
 		"items": [
-			"DrawingCanvas",
-			"sp_bt_close_idle",
-			"sp_bt_play_idle",
-			"sp_clock"
+			"spBar",
+			"txSessionTimer",
+			"spBarBG",
+			"NWjs",
+			"Browser",
+			"Mouse",
+			"btPlayStop",
+			"spBarTipLeft",
+			"spBarTipRight",
+			"spBtStartStop",
+			"txSessionCounter",
+			"Audio",
+			"imgClock"
 		],
 		"subfolders": []
 	},
@@ -47,7 +104,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"event_main"
+			"events_main",
+			"events_global_vars"
 		],
 		"subfolders": []
 	},
@@ -57,7 +115,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "alarm.ogg",
+					"type": "audio/ogg; codecs=vorbis",
+					"sid": 839883645880875
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -69,52 +133,90 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "roboto-light-webfont.ttf",
+					"type": "application/font-sfnt",
+					"sid": 107891384460194
+				},
+				{
+					"name": "roboto-light-webfont.woff",
+					"type": "application/font-woff",
+					"sid": 124780950970908
+				},
+				{
+					"name": "roboto-light-webfont.woff2",
+					"type": "font/woff2",
+					"sid": 805511709434287
+				},
+				{
+					"name": "robotocondensed-light-webfont.woff",
+					"type": "application/font-woff",
+					"sid": 270812189680861
+				},
+				{
+					"name": "robotocondensed-light-webfont.woff2",
+					"type": "font/woff2",
+					"sid": 571242681318485
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
 			"items": [
 				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 899869251864540
-				},
-				{
 					"name": "icon-16.png",
 					"type": "image/png",
-					"sid": 981817354766515
+					"sid": 182986791844474
 				},
 				{
 					"name": "icon-32.png",
 					"type": "image/png",
-					"sid": 180370854348292
+					"sid": 477798461449711
 				},
 				{
-					"name": "icon-64.png",
+					"name": "icon-114.png",
 					"type": "image/png",
-					"sid": 425012893581338
+					"sid": 465364453714005
 				},
 				{
 					"name": "icon-128.png",
 					"type": "image/png",
-					"sid": 185410126233938
-				},
-				{
-					"name": "icon-512.png",
-					"type": "image/png",
-					"sid": 162321425247459
+					"sid": 724316984070331
 				},
 				{
 					"name": "icon-256.png",
 					"type": "image/png",
-					"sid": 518600738432281
+					"sid": 871369380315196
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 540304937571595
 				}
 			],
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
-			"subfolders": []
+			"items": [
+				{
+					"name": "robotoLight.css",
+					"type": "text/css",
+					"sid": 638385240987140
+				},
+				{
+					"name": "robotoCondensedLight.css",
+					"type": "text/css",
+					"sid": 858802154214342
+				}
+			],
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [],
+					"name": "font"
+				}
+			]
 		}
 	},
 	"timelines": {
@@ -128,12 +230,12 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1",
-		"author": "Rafael Fernandes",
-		"authorEmail": "r@rafe.design",
-		"authorWebsite": "rafe.design",
-		"appId": "design.rafe.pomo",
-		"pixelRounding": true,
+		"version": "",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
 		"useLoaderLayout": false,
 		"fullscreenMode": "off",
 		"fullscreenQuality": "high",
@@ -167,11 +269,11 @@
 		"downscaling": "medium",
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "none",
-		"preloadSounds": true,
+		"preloadSounds": false,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true
 	},
 	"viewportWidth": 600,
-	"viewportHeight": 64,
-	"firstLayout": "layout_main"
+	"viewportHeight": 70,
+	"firstLayout": null
 }

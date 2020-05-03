@@ -1,0 +1,53 @@
+{
+	"name": "spBarBG",
+	"plugin-id": "Sprite",
+	"sid": 808614839668795,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 520,
+						"height": 50,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Rafael\\Dropbox\\Public\\pomo\\sprites\\imgBarBg.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1,
+						"collisionPoly": {
+							"points": [
+								0.00384615,
+								0.04,
+								0.5,
+								0,
+								0.996154,
+								0.04,
+								0.996154,
+								0.96,
+								0.5,
+								1,
+								0.00384615,
+								0.96
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 245013921717667,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
