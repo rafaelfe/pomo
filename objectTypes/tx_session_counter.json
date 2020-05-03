@@ -1,5 +1,5 @@
 {
-	"name": "txSessionCounter",
+	"name": "tx_session_counter",
 	"plugin-id": "Text",
 	"sid": 422428118176343,
 	"isGlobal": false,

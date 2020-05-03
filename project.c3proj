@@ -48,16 +48,24 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Button",
-			"name": "Button",
+			"id": "Audio",
+			"name": "Audio",
 			"author": "Scirra",
 			"version": "r197.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Audio",
-			"name": "Audio",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"version": "r197.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
 			"author": "Scirra",
 			"version": "r197.2",
 			"bundled": false
@@ -74,19 +82,20 @@
 	"uniqueId": "2qpwtbcu5boih",
 	"objectTypes": {
 		"items": [
-			"spBar",
-			"txSessionTimer",
-			"spBarBG",
+			"sp_bar",
+			"tx_session_timer",
 			"NWjs",
 			"Browser",
 			"Mouse",
-			"btPlayStop",
-			"spBarTipLeft",
-			"spBarTipRight",
-			"spBtStartStop",
-			"txSessionCounter",
+			"sp_bar_left",
+			"sp_bar_right",
+			"sp_bt_start",
+			"tx_session_counter",
 			"Audio",
-			"imgClock"
+			"sp_clock",
+			"DrawingCanvas",
+			"Sprite",
+			"Touch"
 		],
 		"subfolders": []
 	},
@@ -235,7 +244,7 @@
 		"authorEmail": "",
 		"authorWebsite": "",
 		"appId": "",
-		"pixelRounding": false,
+		"pixelRounding": true,
 		"useLoaderLayout": false,
 		"fullscreenMode": "off",
 		"fullscreenQuality": "high",
@@ -274,6 +283,6 @@
 		"enhancedAccelerationPrecision": true
 	},
 	"viewportWidth": 600,
-	"viewportHeight": 70,
+	"viewportHeight": 64,
 	"firstLayout": null
 }

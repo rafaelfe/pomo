@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "switch",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873031321086391
+		},
+		{
+			"eventType": "variable",
 			"name": "sessionCounter",
 			"type": "number",
 			"initialValue": "1",
@@ -55,7 +65,7 @@
 			"eventType": "variable",
 			"name": "barWidth",
 			"type": "number",
-			"initialValue": "500",
+			"initialValue": "472",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -65,7 +75,7 @@
 			"eventType": "variable",
 			"name": "barInitialWidth",
 			"type": "number",
-			"initialValue": "112",
+			"initialValue": "145",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -80,16 +90,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 465411987369534
-		},
-		{
-			"eventType": "variable",
-			"name": "switch",
-			"type": "string",
-			"initialValue": "",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 594067210472049
 		},
 		{
 			"eventType": "variable",
@@ -115,7 +115,7 @@
 			"eventType": "variable",
 			"name": "breakTime",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

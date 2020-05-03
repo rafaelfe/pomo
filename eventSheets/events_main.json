@@ -4,6 +4,109 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Draw Bars",
+			"description": "Draws the resizable and background bars",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 418396632808250
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Draw background static bar"
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 419972021418839,
+							"parameters": {
+								"x": "112",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 515010468813578,
+							"parameters": {
+								"x": "112",
+								"y": "48",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 175192263002407,
+							"parameters": {
+								"x": "LayoutWidth-16",
+								"y": "16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DrawingCanvas",
+							"sid": 867181419304427,
+							"parameters": {
+								"x": "LayoutWidth-16",
+								"y": "LayoutHeight-16",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "rgba255(44,44,44,255)",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 810627907487794,
+							"parameters": {
+								"left": "112",
+								"top": "8",
+								"right": "LayoutWidth-16",
+								"bottom": "LayoutHeight-8",
+								"color": "rgba255(44,44,44,255)"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DrawingCanvas",
+							"sid": 744222737865304,
+							"parameters": {
+								"left": "104",
+								"top": "16",
+								"right": "LayoutWidth-8",
+								"bottom": "LayoutHeight-16",
+								"color": "rgba255(44,44,44,255)"
+							}
+						}
+					],
+					"sid": 610224439690186
+				}
+			],
+			"sid": 688103370734794
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "STARTUP",
 			"description": "",
 			"isActiveOnStart": true,
@@ -21,7 +124,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 363103267703227,
+							"sid": 265131178804210,
 							"parameters": {
 								"variable": "sessionTime",
 								"value": "sessionTime*60"
@@ -30,86 +133,48 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 738130547060381,
+							"sid": 626616857745185,
 							"parameters": {
 								"variable": "breakTime",
 								"value": "breaktime*60"
 							}
 						},
 						{
-							"id": "set-always-on-top",
-							"objectClass": "NWjs",
-							"sid": 677210379967545,
-							"parameters": {
-								"mode": "always-on-top"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 762169487893066,
+							"sid": 376460236378834,
 							"parameters": {
 								"variable": "counter",
 								"value": "sessionTime"
 							}
 						},
 						{
-							"id": "set-css-style",
-							"objectClass": "btPlayStop",
-							"sid": 139948344011349,
+							"id": "set-always-on-top",
+							"objectClass": "NWjs",
+							"sid": 345140895639291,
 							"parameters": {
-								"property-name": "\"opacity\"",
-								"value": "\"0\""
+								"mode": "always-on-top"
 							}
 						},
 						{
 							"id": "set-width",
-							"objectClass": "spBar",
-							"sid": 538404584069775,
+							"objectClass": "sp_bar",
+							"sid": 782371255008415,
 							"parameters": {
 								"width": "barInitialWidth"
 							}
 						},
 						{
-							"id": "set-web-font",
-							"objectClass": "txSessionTimer",
-							"sid": 453146519531551,
-							"disabled": true,
-							"parameters": {
-								"family-name": "\"robotolight\"",
-								"css-url": "\"robotoLight.css\""
-							}
-						},
-						{
-							"id": "set-web-font",
-							"objectClass": "txSessionCounter",
-							"sid": 448586366810715,
-							"disabled": true,
-							"parameters": {
-								"family-name": "\"roboto_condensedlight\"",
-								"css-url": "\"robotoCondensedLight.css\""
-							}
-						},
-						{
 							"id": "set-text",
-							"objectClass": "txSessionTimer",
-							"sid": 149753168904832,
+							"objectClass": "tx_session_timer",
+							"sid": 623231042685300,
 							"parameters": {
 								"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
 							}
 						},
 						{
-							"id": "set-opacity",
-							"objectClass": "txSessionCounter",
-							"sid": 665982041397293,
-							"disabled": true,
-							"parameters": {
-								"opacity": "20"
-							}
-						},
-						{
 							"id": "stop-animation",
-							"objectClass": "spBtStartStop",
+							"objectClass": "sp_bt_start",
 							"sid": 362563830790131
 						}
 					],
@@ -126,30 +191,34 @@
 					],
 					"actions": [
 						{
+							"type": "comment",
+							"text": "Make the right bar tip move, along with the timer and clock icon"
+						},
+						{
 							"id": "set-position",
-							"objectClass": "spBarTipLeft",
+							"objectClass": "sp_bar_left",
 							"sid": 855506496266624,
 							"parameters": {
-								"x": "spBar.ImagePointX(1)-1",
-								"y": "spBar.ImagePointY(1)"
+								"x": "sp_bar.ImagePointX(1)-1",
+								"y": "sp_bar.ImagePointY(1)"
 							}
 						},
 						{
 							"id": "set-position",
-							"objectClass": "txSessionTimer",
+							"objectClass": "tx_session_timer",
 							"sid": 806839383434660,
 							"parameters": {
-								"x": "spBar.ImagePointX(1) -35",
-								"y": "spBar.ImagePointY(1)+11"
+								"x": "sp_bar.ImagePointX(1) -35",
+								"y": "sp_bar.ImagePointY(1)+11"
 							}
 						},
 						{
 							"id": "set-position",
-							"objectClass": "imgClock",
-							"sid": 149270207565124,
+							"objectClass": "sp_clock",
+							"sid": 317898787410639,
 							"parameters": {
-								"x": "spBar.ImagePointX(1) -25",
-								"y": "spBar.ImagePointY(1)+12"
+								"x": "sp_bar.ImagePointX(1) -32",
+								"y": "sp_bar.ImagePointY(1)+8"
 							}
 						}
 					],
@@ -169,14 +238,17 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-clicked",
-							"objectClass": "btPlayStop",
-							"sid": 684806551242009
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 432948054725579,
+							"parameters": {
+								"object": "sp_bt_start"
+							}
 						},
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 668292903593837,
+							"sid": 852668980450283,
 							"parameters": {
 								"variable": "btStartStop",
 								"comparison": 0,
@@ -188,7 +260,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 563851807882794,
+							"sid": 705871159787431,
 							"parameters": {
 								"variable": "switch",
 								"value": "\"Session\""
@@ -196,8 +268,8 @@
 						},
 						{
 							"id": "set-animation-frame",
-							"objectClass": "spBtStartStop",
-							"sid": 967209657179005,
+							"objectClass": "sp_bt_start",
+							"sid": 212855474455904,
 							"parameters": {
 								"frame-number": "1"
 							}
@@ -205,7 +277,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 466744690567836,
+							"sid": 971931181955557,
 							"parameters": {
 								"seconds": "0.1"
 							}
@@ -213,27 +285,30 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 860237138747805,
+							"sid": 353588696307032,
 							"parameters": {
 								"variable": "btStartStop",
 								"value": "\"Started\""
 							}
 						}
 					],
-					"sid": 668372777786027
+					"sid": 277365351530632
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-clicked",
-							"objectClass": "btPlayStop",
-							"sid": 767687901549706
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 454676127185417,
+							"parameters": {
+								"object": "sp_bt_start"
+							}
 						},
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 109011592107423,
+							"sid": 552285081716057,
 							"parameters": {
 								"variable": "btStartStop",
 								"comparison": 0,
@@ -245,7 +320,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 111739072553237,
+							"sid": 779029007942876,
 							"parameters": {
 								"variable": "switch",
 								"value": "\"\""
@@ -253,8 +328,8 @@
 						},
 						{
 							"id": "set-animation-frame",
-							"objectClass": "spBtStartStop",
-							"sid": 357564013822007,
+							"objectClass": "sp_bt_start",
+							"sid": 205792390294130,
 							"parameters": {
 								"frame-number": "0"
 							}
@@ -262,7 +337,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 379039002641220,
+							"sid": 734932573529230,
 							"parameters": {
 								"variable": "btStartStop",
 								"value": "\"Stopped\""
@@ -271,14 +346,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 764097861376590,
+							"sid": 657811033820855,
 							"parameters": {
 								"variable": "switch",
 								"value": "\"Stopped\""
 							}
 						}
 					],
-					"sid": 294130482402619
+					"sid": 600364002436518
 				}
 			],
 			"sid": 216406815789387
@@ -337,7 +412,7 @@
 								},
 								{
 									"id": "set-width",
-									"objectClass": "spBar",
+									"objectClass": "sp_bar",
 									"sid": 619347010834738,
 									"parameters": {
 										"width": "barInitialWidth-widthIncreaser"
@@ -345,7 +420,7 @@
 								},
 								{
 									"id": "set-text",
-									"objectClass": "txSessionCounter",
+									"objectClass": "tx_session_counter",
 									"sid": 837097237528606,
 									"parameters": {
 										"text": "\"FOCUS \" & sessionCounter"
@@ -369,10 +444,10 @@
 							"actions": [
 								{
 									"id": "set-width",
-									"objectClass": "spBar",
+									"objectClass": "sp_bar",
 									"sid": 876147350047014,
 									"parameters": {
-										"width": "spBar.Width+widthIncreaser"
+										"width": "sp_bar.Width+widthIncreaser"
 									}
 								}
 							],
@@ -422,7 +497,7 @@
 							"actions": [
 								{
 									"id": "set-text",
-									"objectClass": "txSessionTimer",
+									"objectClass": "tx_session_timer",
 									"sid": 573044731132424,
 									"parameters": {
 										"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
@@ -508,7 +583,7 @@
 								},
 								{
 									"id": "set-width",
-									"objectClass": "spBar",
+									"objectClass": "sp_bar",
 									"sid": 882749119392643,
 									"parameters": {
 										"width": "barInitialWidth-widthIncreaser"
@@ -516,7 +591,7 @@
 								},
 								{
 									"id": "set-text",
-									"objectClass": "txSessionCounter",
+									"objectClass": "tx_session_counter",
 									"sid": 323069563732054,
 									"parameters": {
 										"text": "\"BREAK\""
@@ -540,10 +615,10 @@
 							"actions": [
 								{
 									"id": "set-width",
-									"objectClass": "spBar",
+									"objectClass": "sp_bar",
 									"sid": 589726906690225,
 									"parameters": {
-										"width": "spBar.Width+widthIncreaser"
+										"width": "sp_bar.Width+widthIncreaser"
 									}
 								}
 							],
@@ -593,7 +668,7 @@
 							"actions": [
 								{
 									"id": "set-text",
-									"objectClass": "txSessionTimer",
+									"objectClass": "tx_session_timer",
 									"sid": 441986115704922,
 									"parameters": {
 										"text": "zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
@@ -649,7 +724,7 @@
 						},
 						{
 							"id": "set-width",
-							"objectClass": "spBar",
+							"objectClass": "sp_bar",
 							"sid": 937445650227400,
 							"parameters": {
 								"width": "barInitialWidth"
@@ -657,7 +732,7 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "txSessionTimer",
+							"objectClass": "tx_session_timer",
 							"sid": 803869475462453,
 							"parameters": {
 								"text": " zeropad(int(sessionTime/60% 60), 1) & \":\" & zeropad(int(sessionTime%60), 2)"
@@ -668,6 +743,27 @@
 				}
 			],
 			"sid": 236118510440609
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 391737741066577,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 686413141651324
+				}
+			],
+			"sid": 845602320857373
 		}
 	],
 	"sid": 372758656478851
