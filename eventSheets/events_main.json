@@ -122,12 +122,20 @@
 					],
 					"actions": [
 						{
+							"id": "set-always-on-top",
+							"objectClass": "NWjs",
+							"sid": 732360264311105,
+							"parameters": {
+								"mode": "always-on-top"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 265131178804210,
 							"parameters": {
-								"variable": "sessionTime",
-								"value": "sessionTime*60"
+								"variable": "timeSession",
+								"value": "timeSession*60"
 							}
 						},
 						{
@@ -135,8 +143,8 @@
 							"objectClass": "System",
 							"sid": 626616857745185,
 							"parameters": {
-								"variable": "breakTime",
-								"value": "breaktime*60"
+								"variable": "timeBreak",
+								"value": "timeBreak*60"
 							}
 						},
 						{
@@ -144,16 +152,8 @@
 							"objectClass": "System",
 							"sid": 376460236378834,
 							"parameters": {
-								"variable": "counter",
-								"value": "sessionTime"
-							}
-						},
-						{
-							"id": "set-always-on-top",
-							"objectClass": "NWjs",
-							"sid": 345140895639291,
-							"parameters": {
-								"mode": "always-on-top"
+								"variable": "timeCounter",
+								"value": "timeSession"
 							}
 						},
 						{
@@ -169,7 +169,7 @@
 							"objectClass": "tx_session_timer",
 							"sid": 623231042685300,
 							"parameters": {
-								"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+								"text": " zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
 							}
 						},
 						{
@@ -398,7 +398,7 @@
 									"sid": 742334994039184,
 									"parameters": {
 										"variable": "widthIncreaser",
-										"value": "(barWidth-barInitialWidth)/sessionTime"
+										"value": "(barFullWidth-barInitialWidth)/timeSession"
 									}
 								},
 								{
@@ -406,8 +406,8 @@
 									"objectClass": "System",
 									"sid": 836372160940506,
 									"parameters": {
-										"variable": "counter",
-										"value": "sessionTime+0.99"
+										"variable": "timeCounter",
+										"value": "timeSession+0.99"
 									}
 								},
 								{
@@ -461,7 +461,7 @@
 									"objectClass": "System",
 									"sid": 929103818922961,
 									"parameters": {
-										"variable": "counter",
+										"variable": "timeCounter",
 										"comparison": 3,
 										"value": "0"
 									}
@@ -500,7 +500,7 @@
 									"objectClass": "tx_session_timer",
 									"sid": 573044731132424,
 									"parameters": {
-										"text": " zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+										"text": " zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
 									}
 								},
 								{
@@ -508,8 +508,8 @@
 									"objectClass": "System",
 									"sid": 961723537040025,
 									"parameters": {
-										"variable": "counter",
-										"value": "min(sessionTime+1,counter-dt)"
+										"variable": "timeCounter",
+										"value": "min(timeSession+1,timeCounter-dt)"
 									}
 								}
 							],
@@ -569,7 +569,7 @@
 									"sid": 366922780781951,
 									"parameters": {
 										"variable": "widthIncreaser",
-										"value": "(barWidth-barInitialWidth)/breakTime"
+										"value": "(barFullWidth-barInitialWidth)/timeBreak"
 									}
 								},
 								{
@@ -577,8 +577,8 @@
 									"objectClass": "System",
 									"sid": 634329472408969,
 									"parameters": {
-										"variable": "counter",
-										"value": "breakTime+1"
+										"variable": "timeCounter",
+										"value": "timeBreak+1"
 									}
 								},
 								{
@@ -632,7 +632,7 @@
 									"objectClass": "System",
 									"sid": 368228948471975,
 									"parameters": {
-										"variable": "counter",
+										"variable": "timeCounter",
 										"comparison": 3,
 										"value": "0"
 									}
@@ -671,7 +671,7 @@
 									"objectClass": "tx_session_timer",
 									"sid": 441986115704922,
 									"parameters": {
-										"text": "zeropad(int(counter/60% 60), 1) & \":\" & zeropad(int(counter%60), 2)"
+										"text": "zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
 									}
 								},
 								{
@@ -679,8 +679,8 @@
 									"objectClass": "System",
 									"sid": 295301598875653,
 									"parameters": {
-										"variable": "counter",
-										"value": "min(breakTime+1,counter-dt)"
+										"variable": "timeCounter",
+										"value": "min(timeBreak+1,timeCounter-dt)"
 									}
 								}
 							],
@@ -718,8 +718,8 @@
 							"objectClass": "System",
 							"sid": 714988716616887,
 							"parameters": {
-								"variable": "counter",
-								"value": "sessionTime+1"
+								"variable": "timeCounter",
+								"value": "timeSession+1"
 							}
 						},
 						{
@@ -732,10 +732,18 @@
 						},
 						{
 							"id": "set-text",
+							"objectClass": "tx_session_counter",
+							"sid": 636454528207118,
+							"parameters": {
+								"text": "\"FOCUS \" & sessionCounter"
+							}
+						},
+						{
+							"id": "set-text",
 							"objectClass": "tx_session_timer",
 							"sid": 803869475462453,
 							"parameters": {
-								"text": " zeropad(int(sessionTime/60% 60), 1) & \":\" & zeropad(int(sessionTime%60), 2)"
+								"text": " zeropad(int(timeSession/60% 60), 1) & \":\" & zeropad(int(timeSession%60), 2)"
 							}
 						}
 					],

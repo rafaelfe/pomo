@@ -1,9 +1,9 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 19702,
-	"name": "abcd",
+	"savedWithRelease": 19800,
+	"name": " pomo",
 	"runtime": "c3",
-	"useWorker": false,
+	"useWorker": "dom",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "NodeWebkit",
 			"name": "NW.js",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r197.2",
+			"version": "r198",
 			"bundled": false
 		}
 	],
@@ -292,7 +292,7 @@
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "none",
+		"loaderStyle": "splash",
 		"preloadSounds": false,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true

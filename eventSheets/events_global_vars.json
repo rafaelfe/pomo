@@ -3,36 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "oldMouseY",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 832457143053999
-		},
-		{
-			"eventType": "variable",
-			"name": "oldMouseX",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 587767543549070
-		},
-		{
-			"eventType": "variable",
-			"name": "moveWindow",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 669223335819732
-		},
-		{
-			"eventType": "variable",
 			"name": "btStartStop",
 			"type": "string",
 			"initialValue": "Stopped",
@@ -63,7 +33,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "barWidth",
+			"name": "barFullWidth",
 			"type": "number",
 			"initialValue": "472",
 			"comment": "",
@@ -83,16 +53,6 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "counter",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 465411987369534
-		},
-		{
-			"eventType": "variable",
 			"name": "widthIncreaser",
 			"type": "number",
 			"initialValue": "0",
@@ -103,9 +63,19 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "sessionTime",
+			"name": "timeCounter",
 			"type": "number",
-			"initialValue": "25",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 639640897043393
+		},
+		{
+			"eventType": "variable",
+			"name": "timeSession",
+			"type": "number",
+			"initialValue": "0.5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -113,7 +83,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "breakTime",
+			"name": "timeBreak",
 			"type": "number",
 			"initialValue": "5",
 			"comment": "",

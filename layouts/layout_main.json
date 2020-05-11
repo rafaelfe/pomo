@@ -33,7 +33,7 @@
 				{
 					"type": "tx_session_counter",
 					"properties": {
-						"text": "STOPPED",
+						"text": "FOCUS 1",
 						"enable-bbcode": false,
 						"font": "robotocondensed-light-webfont",
 						"size": 23.5,
