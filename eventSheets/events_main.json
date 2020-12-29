@@ -5,7 +5,7 @@
 			"eventType": "group",
 			"disabled": false,
 			"title": "Draw Bars",
-			"description": "Draws the background bar",
+			"description": "Draws the time loading bar",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -196,7 +196,7 @@
 						},
 						{
 							"id": "set-position",
-							"objectClass": "sp_bar_left",
+							"objectClass": "sp_bar_right",
 							"sid": 855506496266624,
 							"parameters": {
 								"x": "sp_bar.ImagePointX(1)-1",

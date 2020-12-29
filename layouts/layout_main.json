@@ -27,7 +27,8 @@
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0
 					}
 				},
 				{
@@ -144,7 +145,7 @@
 					}
 				},
 				{
-					"type": "sp_bar_left",
+					"type": "sp_bar_right",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -179,7 +180,7 @@
 					}
 				},
 				{
-					"type": "sp_bar_right",
+					"type": "sp_bar_left",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

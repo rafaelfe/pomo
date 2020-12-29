@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 19800,
+	"savedWithRelease": 22900,
 	"name": " pomo",
 	"runtime": "c3",
 	"useWorker": "dom",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "NodeWebkit",
 			"name": "NW.js",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
-			"version": "r198",
+			"version": "r229",
 			"bundled": false
 		}
 	],
@@ -87,8 +87,8 @@
 			"NWjs",
 			"Browser",
 			"Mouse",
-			"sp_bar_left",
 			"sp_bar_right",
+			"sp_bar_left",
 			"sp_bt_start",
 			"tx_session_counter",
 			"Audio",
@@ -191,32 +191,50 @@
 				{
 					"name": "icon-16.png",
 					"type": "image/png",
-					"sid": 182986791844474
+					"sid": 182986791844474,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				},
 				{
 					"name": "icon-32.png",
 					"type": "image/png",
-					"sid": 477798461449711
+					"sid": 477798461449711,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				},
 				{
 					"name": "icon-114.png",
 					"type": "image/png",
-					"sid": 465364453714005
+					"sid": 465364453714005,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				},
 				{
 					"name": "icon-128.png",
 					"type": "image/png",
-					"sid": 724316984070331
+					"sid": 724316984070331,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				},
 				{
 					"name": "icon-256.png",
 					"type": "image/png",
-					"sid": 871369380315196
+					"sid": 871369380315196,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
 				},
 				{
 					"name": "loading-logo.png",
 					"type": "image/png",
-					"sid": 540304937571595
+					"sid": 540304937571595,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
 				}
 			],
 			"subfolders": []
@@ -287,6 +305,7 @@
 		"orientations": "any",
 		"enableWebGL": true,
 		"gpuPreference": "high-performance",
+		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
 		"sampling": "trilinear",
@@ -295,7 +314,8 @@
 		"loaderStyle": "splash",
 		"preloadSounds": false,
 		"clearBackground": true,
-		"enhancedAccelerationPrecision": true
+		"enhancedAccelerationPrecision": true,
+		"cordovaiOSScheme": "file"
 	},
 	"viewportWidth": 600,
 	"viewportHeight": 64,

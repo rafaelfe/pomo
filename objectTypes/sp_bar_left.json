@@ -1,14 +1,14 @@
 {
 	"name": "sp_bar_left",
 	"plugin-id": "Sprite",
-	"sid": 389468959628177,
+	"sid": 178391589165060,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",
 			"name": "Pin",
-			"sid": 219402313790351
+			"sid": 752997192130647
 		}
 	],
 	"effectTypes": [],
@@ -24,7 +24,7 @@
 						"originalSource": "C:\\Users\\Rafael\\Dropbox\\Public\\pomo\\sprites\\imgBarTip.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4,
+						"imageSpriteId": 5,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 864959133469769,
+				"sid": 397738992251162,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

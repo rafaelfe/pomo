@@ -2,3 +2,5 @@ releases/
 releases/.DS_Store
 releases/beta/.DS_Store
 images/.DS_Store
+project.uistate.json
+releases/beta/.DS_Store
