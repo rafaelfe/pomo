@@ -23,79 +23,88 @@
 							"text": "Draw background static bar"
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 887153603655107,
+							"parameters": {
+								"variable": "color_papoula",
+								"value": "rgba255(252,51,103,255)"
+							}
+						},
+						{
 							"id": "fill-ellipse",
 							"objectClass": "DrawingCanvas",
-							"sid": 419972021418839,
+							"sid": 571566533370674,
 							"parameters": {
-								"x": "112",
-								"y": "16",
+								"x": "104+8",
+								"y": "8+8",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "rgba255(44,44,44,255)",
+								"color": "color_papoula",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
 							"objectClass": "DrawingCanvas",
-							"sid": 515010468813578,
+							"sid": 761266214666649,
 							"parameters": {
-								"x": "112",
-								"y": "48",
+								"x": "104+8",
+								"y": "LayoutHeight-16",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "rgba255(44,44,44,255)",
+								"color": "color_papoula",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
 							"objectClass": "DrawingCanvas",
-							"sid": 175192263002407,
+							"sid": 339937774837468,
 							"parameters": {
 								"x": "LayoutWidth-16",
-								"y": "16",
+								"y": "8+8",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "rgba255(44,44,44,255)",
+								"color": "color_papoula",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
 							"objectClass": "DrawingCanvas",
-							"sid": 867181419304427,
+							"sid": 782073193592288,
 							"parameters": {
 								"x": "LayoutWidth-16",
 								"y": "LayoutHeight-16",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "rgba255(44,44,44,255)",
+								"color": "color_papoula",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-rect",
 							"objectClass": "DrawingCanvas",
-							"sid": 810627907487794,
+							"sid": 177550082411718,
 							"parameters": {
-								"left": "112",
+								"left": "104+8",
 								"top": "8",
 								"right": "LayoutWidth-16",
 								"bottom": "LayoutHeight-8",
-								"color": "rgba255(44,44,44,255)"
+								"color": "color_papoula"
 							}
 						},
 						{
 							"id": "fill-rect",
 							"objectClass": "DrawingCanvas",
-							"sid": 744222737865304,
+							"sid": 900004227508103,
 							"parameters": {
 								"left": "104",
 								"top": "16",
 								"right": "LayoutWidth-8",
 								"bottom": "LayoutHeight-16",
-								"color": "rgba255(44,44,44,255)"
+								"color": "color_papoula"
 							}
 						}
 					],

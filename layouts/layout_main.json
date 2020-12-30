@@ -34,10 +34,10 @@
 				{
 					"type": "tx_session_counter",
 					"properties": {
-						"text": "FOCUS 1",
+						"text": "FOCUS 0",
 						"enable-bbcode": false,
-						"font": "robotocondensed-light-webfont",
-						"size": 23.5,
+						"font": "RobotoMono-Regular",
+						"size": 24,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -58,7 +58,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 336,
-						"y": 20,
+						"y": 18,
 						"width": 240,
 						"height": 32,
 						"originX": 0,
@@ -107,8 +107,8 @@
 					"properties": {
 						"text": "0:00",
 						"enable-bbcode": false,
-						"font": "roboto-light-webfont",
-						"size": 23.25,
+						"font": "RobotoMono-Regular",
+						"size": 24,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,

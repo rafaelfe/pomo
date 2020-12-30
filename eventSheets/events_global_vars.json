@@ -90,6 +90,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 489675851722080
+		},
+		{
+			"eventType": "variable",
+			"name": "color_papoula",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 253813015423547
 		}
 	],
 	"sid": 737218647593982

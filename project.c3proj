@@ -4,7 +4,7 @@
 	"name": " pomo",
 	"runtime": "c3",
 	"useWorker": "dom",
-	"bundleAddons": false,
+	"bundleAddons": true,
 	"usedAddons": [
 		{
 			"type": "plugin",
@@ -309,13 +309,13 @@
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
 		"sampling": "trilinear",
-		"downscaling": "medium",
+		"downscaling": "high",
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": false,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true,
-		"cordovaiOSScheme": "file"
+		"cordovaiOSScheme": "app"
 	},
 	"viewportWidth": 600,
 	"viewportHeight": 64,
