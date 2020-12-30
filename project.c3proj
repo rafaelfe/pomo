@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 22900,
-	"name": " pomo",
+	"name": "abcd",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": true,
@@ -93,9 +93,12 @@
 			"tx_session_counter",
 			"Audio",
 			"sp_clock",
-			"DrawingCanvas",
+			"DC_bar",
 			"Sprite",
-			"Touch"
+			"Touch",
+			"DC_leftBar",
+			"DC_rightBar",
+			"DC_bgbar"
 		],
 		"subfolders": []
 	},

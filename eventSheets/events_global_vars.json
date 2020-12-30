@@ -75,7 +75,7 @@
 			"eventType": "variable",
 			"name": "timeSession",
 			"type": "number",
-			"initialValue": "0.5",
+			"initialValue": "25",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -93,7 +93,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "color_papoula",
+			"name": "color",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",

@@ -19,92 +19,216 @@
 					],
 					"actions": [
 						{
-							"type": "comment",
-							"text": "Draw background static bar"
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 887153603655107,
+							"sid": 371294841097540,
 							"parameters": {
-								"variable": "color_papoula",
+								"variable": "color",
 								"value": "rgba255(252,51,103,255)"
 							}
 						},
 						{
+							"type": "comment",
+							"text": "Draw background static bar"
+						},
+						{
 							"id": "fill-ellipse",
-							"objectClass": "DrawingCanvas",
-							"sid": 571566533370674,
+							"objectClass": "DC_bgbar",
+							"sid": 691911943607334,
 							"parameters": {
-								"x": "104+8",
-								"y": "8+8",
+								"x": "8",
+								"y": "8",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "color_papoula",
+								"color": "rgba255(44,44,44,255)",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
-							"objectClass": "DrawingCanvas",
-							"sid": 761266214666649,
+							"objectClass": "DC_bgbar",
+							"sid": 206563934985315,
 							"parameters": {
-								"x": "104+8",
-								"y": "LayoutHeight-16",
+								"x": "8",
+								"y": "40",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "color_papoula",
+								"color": "rgba255(44,44,44,255)",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
-							"objectClass": "DrawingCanvas",
-							"sid": 339937774837468,
+							"objectClass": "DC_bgbar",
+							"sid": 720826349062295,
 							"parameters": {
-								"x": "LayoutWidth-16",
-								"y": "8+8",
+								"x": "480",
+								"y": "8",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "color_papoula",
+								"color": "rgba255(44,44,44,255)",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-ellipse",
-							"objectClass": "DrawingCanvas",
-							"sid": 782073193592288,
+							"objectClass": "DC_bgbar",
+							"sid": 193095311820672,
 							"parameters": {
-								"x": "LayoutWidth-16",
-								"y": "LayoutHeight-16",
+								"x": "480",
+								"y": "40",
 								"radius-x": "8",
 								"radius-y": "8",
-								"color": "color_papoula",
+								"color": "rgba255(44,44,44,255)",
 								"edge": "smooth"
 							}
 						},
 						{
 							"id": "fill-rect",
-							"objectClass": "DrawingCanvas",
-							"sid": 177550082411718,
+							"objectClass": "DC_bgbar",
+							"sid": 508862094783850,
 							"parameters": {
-								"left": "104+8",
+								"left": "0",
 								"top": "8",
-								"right": "LayoutWidth-16",
-								"bottom": "LayoutHeight-8",
-								"color": "color_papoula"
+								"right": "488",
+								"bottom": "40",
+								"color": "rgba255(44,44,44,255)"
 							}
 						},
 						{
 							"id": "fill-rect",
-							"objectClass": "DrawingCanvas",
-							"sid": 900004227508103,
+							"objectClass": "DC_bgbar",
+							"sid": 745383451190940,
 							"parameters": {
-								"left": "104",
-								"top": "16",
-								"right": "LayoutWidth-8",
-								"bottom": "LayoutHeight-16",
-								"color": "color_papoula"
+								"left": "8",
+								"top": "0",
+								"right": "480",
+								"bottom": "48",
+								"color": "rgba255(44,44,44,255)"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Draw left side of the bar"
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DC_leftBar",
+							"sid": 483778954219180,
+							"parameters": {
+								"x": "8",
+								"y": "8",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "color",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DC_leftBar",
+							"sid": 394902885540029,
+							"parameters": {
+								"x": "8",
+								"y": "40",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "color",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DC_leftBar",
+							"sid": 548133780297051,
+							"parameters": {
+								"left": "0",
+								"top": "8",
+								"right": "16",
+								"bottom": "40",
+								"color": "color"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DC_leftBar",
+							"sid": 709836952606389,
+							"parameters": {
+								"left": "8",
+								"top": "0",
+								"right": "16",
+								"bottom": "48",
+								"color": "color"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Draw right side of the bar"
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DC_rightBar",
+							"sid": 599674468800844,
+							"parameters": {
+								"x": "8",
+								"y": "8",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "color",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-ellipse",
+							"objectClass": "DC_rightBar",
+							"sid": 627266761209718,
+							"parameters": {
+								"x": "8",
+								"y": "40",
+								"radius-x": "8",
+								"radius-y": "8",
+								"color": "color",
+								"edge": "smooth"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DC_rightBar",
+							"sid": 183779244126851,
+							"parameters": {
+								"left": "0",
+								"top": "8",
+								"right": "16",
+								"bottom": "40",
+								"color": "color"
+							}
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DC_rightBar",
+							"sid": 535685328266338,
+							"parameters": {
+								"left": "0",
+								"top": "0",
+								"right": "8",
+								"bottom": "48",
+								"color": "color"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Draw middle part of the bar"
+						},
+						{
+							"id": "fill-rect",
+							"objectClass": "DC_bar",
+							"sid": 453567300388987,
+							"parameters": {
+								"left": "0",
+								"top": "0",
+								"right": "472",
+								"bottom": "48",
+								"color": "color"
 							}
 						}
 					],
@@ -167,8 +291,8 @@
 						},
 						{
 							"id": "set-width",
-							"objectClass": "sp_bar",
-							"sid": 782371255008415,
+							"objectClass": "DC_bar",
+							"sid": 442565278171576,
 							"parameters": {
 								"width": "barInitialWidth"
 							}
@@ -204,30 +328,29 @@
 							"text": "Make the right bar tip move, along with the timer and clock icon"
 						},
 						{
-							"id": "set-position",
-							"objectClass": "sp_bar_right",
-							"sid": 855506496266624,
+							"id": "set-x",
+							"objectClass": "DC_rightBar",
+							"sid": 857337903016226,
 							"parameters": {
-								"x": "sp_bar.ImagePointX(1)-1",
-								"y": "sp_bar.ImagePointY(1)"
+								"x": "DC_bar.X+DC_bar.Width-8"
 							}
 						},
 						{
 							"id": "set-position",
 							"objectClass": "tx_session_timer",
-							"sid": 339333276509254,
+							"sid": 543194839092588,
 							"parameters": {
-								"x": "sp_bar.ImagePointX(1) -45",
-								"y": "sp_bar.ImagePointY(1)+11"
+								"x": "DC_bar.X+DC_bar.Width-40",
+								"y": "DC_bar.Y+10"
 							}
 						},
 						{
 							"id": "set-position",
 							"objectClass": "sp_clock",
-							"sid": 735577113002051,
+							"sid": 941421688789611,
 							"parameters": {
-								"x": "sp_bar.ImagePointX(1) -36",
-								"y": "sp_bar.ImagePointY(1)+8"
+								"x": "DC_bar.X+DC_bar.Width-32",
+								"y": "DC_bar.Y+7"
 							}
 						}
 					],
@@ -421,8 +544,8 @@
 								},
 								{
 									"id": "set-width",
-									"objectClass": "sp_bar",
-									"sid": 619347010834738,
+									"objectClass": "DC_bar",
+									"sid": 294810682052425,
 									"parameters": {
 										"width": "barInitialWidth-widthIncreaser"
 									}
@@ -453,10 +576,10 @@
 							"actions": [
 								{
 									"id": "set-width",
-									"objectClass": "sp_bar",
-									"sid": 876147350047014,
+									"objectClass": "DC_bar",
+									"sid": 429447290207688,
 									"parameters": {
-										"width": "sp_bar.Width+widthIncreaser"
+										"width": "Self.Width+widthIncreaser"
 									}
 								}
 							],
@@ -592,8 +715,8 @@
 								},
 								{
 									"id": "set-width",
-									"objectClass": "sp_bar",
-									"sid": 882749119392643,
+									"objectClass": "DC_bar",
+									"sid": 526043505311826,
 									"parameters": {
 										"width": "barInitialWidth-widthIncreaser"
 									}
@@ -624,10 +747,10 @@
 							"actions": [
 								{
 									"id": "set-width",
-									"objectClass": "sp_bar",
-									"sid": 589726906690225,
+									"objectClass": "DC_bar",
+									"sid": 401859000660568,
 									"parameters": {
-										"width": "sp_bar.Width+widthIncreaser"
+										"width": "Self.Width+widthIncreaser"
 									}
 								}
 							],
@@ -733,8 +856,8 @@
 						},
 						{
 							"id": "set-width",
-							"objectClass": "sp_bar",
-							"sid": 937445650227400,
+							"objectClass": "DC_bar",
+							"sid": 870934131340883,
 							"parameters": {
 								"width": "barInitialWidth"
 							}
