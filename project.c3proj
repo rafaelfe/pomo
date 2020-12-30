@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 22900,
-	"name": "abcd",
+	"name": "aaaa",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": true,
@@ -147,44 +147,9 @@
 		"font": {
 			"items": [
 				{
-					"name": "roboto-light-webfont.ttf",
-					"type": "application/font-sfnt",
-					"sid": 107891384460194
-				},
-				{
-					"name": "roboto-light-webfont.woff",
-					"type": "application/font-woff",
-					"sid": 124780950970908
-				},
-				{
-					"name": "roboto-light-webfont.woff2",
-					"type": "font/woff2",
-					"sid": 805511709434287
-				},
-				{
-					"name": "robotocondensed-light-webfont.woff",
-					"type": "application/font-woff",
-					"sid": 270812189680861
-				},
-				{
-					"name": "robotocondensed-light-webfont.woff2",
-					"type": "font/woff2",
-					"sid": 571242681318485
-				},
-				{
 					"name": "RobotoMono-Regular.ttf",
 					"type": "application/font-sfnt",
 					"sid": 368789576298420
-				},
-				{
-					"name": "RobotoMono-Thin.ttf",
-					"type": "application/font-sfnt",
-					"sid": 156330063480682
-				},
-				{
-					"name": "RobotoMono-Light.ttf",
-					"type": "application/font-sfnt",
-					"sid": 355820044490023
 				}
 			],
 			"subfolders": []
@@ -314,7 +279,7 @@
 		"sampling": "trilinear",
 		"downscaling": "high",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "none",
 		"preloadSounds": false,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true,
