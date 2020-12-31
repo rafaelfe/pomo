@@ -292,7 +292,7 @@
 						{
 							"id": "set-width",
 							"objectClass": "DC_bar",
-							"sid": 442565278171576,
+							"sid": 426928430178483,
 							"parameters": {
 								"width": "barInitialWidth"
 							}
@@ -389,6 +389,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 414109273814196,
+							"parameters": {
+								"variable": "Timer_SSC",
+								"value": "time"
+							}
+						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
@@ -525,32 +534,6 @@
 							],
 							"actions": [
 								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 742334994039184,
-									"parameters": {
-										"variable": "widthIncreaser",
-										"value": "(barFullWidth-barInitialWidth)/timeSession"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 836372160940506,
-									"parameters": {
-										"variable": "timeCounter",
-										"value": "timeSession+0.99"
-									}
-								},
-								{
-									"id": "set-width",
-									"objectClass": "DC_bar",
-									"sid": 294810682052425,
-									"parameters": {
-										"width": "barInitialWidth-widthIncreaser"
-									}
-								},
-								{
 									"id": "set-text",
 									"objectClass": "tx_session_counter",
 									"sid": 837097237528606,
@@ -565,25 +548,40 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-x-seconds",
+									"id": "every-tick",
 									"objectClass": "System",
-									"sid": 842703115087563,
-									"parameters": {
-										"interval-seconds": "1"
-									}
+									"sid": 916358452623357
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 777818046170313,
+							"children": [
 								{
-									"id": "set-width",
-									"objectClass": "DC_bar",
-									"sid": 429447290207688,
-									"parameters": {
-										"width": "Self.Width+widthIncreaser"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-width",
+											"objectClass": "DC_bar",
+											"sid": 473792876606999,
+											"parameters": {
+												"comparison": 3,
+												"width": "barFullWidth"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "DC_bar",
+											"sid": 265918082815293,
+											"parameters": {
+												"width": "barInitialWidth+((time-Timer_SSC)*(barFullWidth-barInitialWidth)/30)"
+											}
+										}
+									],
+									"sid": 415918907818455
 								}
-							],
-							"sid": 473844208744474
+							]
 						},
 						{
 							"eventType": "block",

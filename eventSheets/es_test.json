@@ -1,0 +1,192 @@
+{
+	"name": "ES_test",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "timeInitial",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 720504008590606
+		},
+		{
+			"eventType": "variable",
+			"name": "timeTarget",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 613485117474811
+		},
+		{
+			"eventType": "variable",
+			"name": "timeElapsed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 235484957728848
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 682547560147805
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 392027203627107,
+					"parameters": {
+						"variable": "timeInitial",
+						"value": "Date.Now"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 660981005443488,
+					"parameters": {
+						"variable": "timeTarget",
+						"value": "Date.Now+10000"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "barMain",
+					"sid": 865450110016586,
+					"parameters": {
+						"width": "0"
+					}
+				}
+			],
+			"sid": 430763948941708
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 199645524629243
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 154009921528979,
+					"parameters": {
+						"variable": "timeElapsed",
+						"value": "Date.Now-timeInitial"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txt_timeElapsed",
+					"sid": 605813686672303,
+					"parameters": {
+						"text": "\"TimeElapsed \" & timeElapsed"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txt_timeRemaining",
+					"sid": 324705180241205,
+					"parameters": {
+						"text": "\"TimeRemaining \" & (timeTarget-timeInitial)-timeElapsed"
+					}
+				}
+			],
+			"sid": 996865186969758,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-width",
+							"objectClass": "barMain",
+							"sid": 185993519879121,
+							"parameters": {
+								"comparison": 3,
+								"width": "barBg.Width"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "barMain",
+							"sid": 734988250334362,
+							"parameters": {
+								"width": "100+(timeElapsed*(barBg.Width-100)/10000)"
+							}
+						}
+					],
+					"sid": 755610411708972
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 736564226246677,
+							"parameters": {
+								"variable": "timeElapsed",
+								"comparison": 4,
+								"value": "timeTarget-timeInitial"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "barMain",
+							"sid": 428461932961291,
+							"parameters": {
+								"width": "barBg.Width"
+							}
+						}
+					],
+					"sid": 710580513749279
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 173320682277341,
+					"parameters": {
+						"variable": "timeElapsed",
+						"comparison": 5,
+						"value": "10000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-color",
+					"objectClass": "txt_timeElapsed",
+					"sid": 790024575000852,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
+				}
+			],
+			"sid": 403248109634368
+		}
+	],
+	"sid": 616999454911403
+}

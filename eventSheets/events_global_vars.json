@@ -75,7 +75,7 @@
 			"eventType": "variable",
 			"name": "timeSession",
 			"type": "number",
-			"initialValue": "25",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -100,6 +100,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 253813015423547
+		},
+		{
+			"eventType": "variable",
+			"name": "Timer_SSC",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 543956501010096
 		}
 	],
 	"sid": 737218647593982

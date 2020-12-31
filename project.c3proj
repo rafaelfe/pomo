@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 22900,
-	"name": "aaaa",
+	"name": "pomo-beta",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": true,
@@ -71,6 +71,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Date",
+			"name": "Date",
+			"author": "Scirra",
+			"version": "r229",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
@@ -98,7 +106,12 @@
 			"Touch",
 			"DC_leftBar",
 			"DC_rightBar",
-			"DC_bgbar"
+			"DC_bgbar",
+			"barMain",
+			"barBg",
+			"txt_timeElapsed",
+			"txt_timeRemaining",
+			"Date"
 		],
 		"subfolders": []
 	},
@@ -117,7 +130,8 @@
 	"eventSheets": {
 		"items": [
 			"events_main",
-			"events_global_vars"
+			"events_global_vars",
+			"ES_test"
 		],
 		"subfolders": []
 	},
@@ -241,9 +255,9 @@
 	"properties": {
 		"description": "",
 		"version": "",
-		"author": "",
-		"authorEmail": "",
-		"authorWebsite": "",
+		"author": "Rafael Fernandes",
+		"authorEmail": "r@rafaelfe.com",
+		"authorWebsite": "rafaelfe.com",
 		"appId": "",
 		"pixelRounding": true,
 		"useLoaderLayout": false,
@@ -286,6 +300,6 @@
 		"cordovaiOSScheme": "app"
 	},
 	"viewportWidth": 600,
-	"viewportHeight": 64,
+	"viewportHeight": 128,
 	"firstLayout": null
 }
