@@ -1,5 +1,5 @@
 {
-	"name": "tx_session_timer",
+	"name": "tx_timeSession",
 	"plugin-id": "Text",
 	"sid": 723301621735855,
 	"isGlobal": false,

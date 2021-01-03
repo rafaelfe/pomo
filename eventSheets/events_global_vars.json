@@ -53,29 +53,19 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "widthIncreaser",
+			"name": "color",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 148725313372965
-		},
-		{
-			"eventType": "variable",
-			"name": "timeCounter",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 639640897043393
+			"sid": 178333842001680
 		},
 		{
 			"eventType": "variable",
 			"name": "timeSession",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "25",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -93,23 +83,43 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "color",
+			"name": "timeInitial",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 253813015423547
+			"sid": 625356436578419
 		},
 		{
 			"eventType": "variable",
-			"name": "Timer_SSC",
+			"name": "timeTarget",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 543956501010096
+			"sid": 386627843649444
+		},
+		{
+			"eventType": "variable",
+			"name": "timeElapsed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 316255426622424
+		},
+		{
+			"eventType": "variable",
+			"name": "timeRemaining",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 961563429227592
 		}
 	],
 	"sid": 737218647593982

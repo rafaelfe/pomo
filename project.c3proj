@@ -91,7 +91,7 @@
 	"objectTypes": {
 		"items": [
 			"sp_bar",
-			"tx_session_timer",
+			"tx_timeSession",
 			"NWjs",
 			"Browser",
 			"Mouse",
@@ -102,13 +102,11 @@
 			"Audio",
 			"sp_clock",
 			"DC_bar",
-			"Sprite",
+			"sp_close",
 			"Touch",
 			"DC_leftBar",
 			"DC_rightBar",
 			"DC_bgbar",
-			"barMain",
-			"barBg",
 			"txt_timeElapsed",
 			"txt_timeRemaining",
 			"Date"
@@ -130,14 +128,22 @@
 	"eventSheets": {
 		"items": [
 			"events_main",
-			"events_global_vars",
-			"ES_test"
+			"events_global_vars"
 		],
 		"subfolders": []
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 776788270935612,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
@@ -300,6 +306,6 @@
 		"cordovaiOSScheme": "app"
 	},
 	"viewportWidth": 600,
-	"viewportHeight": 128,
+	"viewportHeight": 64,
 	"firstLayout": null
 }

@@ -255,6 +255,10 @@
 					],
 					"actions": [
 						{
+							"type": "script",
+							"script": "var div = document.createElement(\"div\");\ndiv.style.width = \"498px\";\ndiv.style.height = \"64px\";\ndiv.style.left = \"100px\";\ndiv.style.top = \"0px\";\ndiv.style.position = \"absolute\";\ndiv.style.webkitAppRegion = \"drag\";\ndocument.body.appendChild(div);"
+						},
+						{
 							"id": "set-always-on-top",
 							"objectClass": "NWjs",
 							"sid": 732360264311105,
@@ -265,28 +269,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 265131178804210,
+							"sid": 184515621813708,
 							"parameters": {
 								"variable": "timeSession",
-								"value": "timeSession*60"
+								"value": "timeSession*60000"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 626616857745185,
+							"sid": 348028183746475,
 							"parameters": {
 								"variable": "timeBreak",
-								"value": "timeBreak*60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 376460236378834,
-							"parameters": {
-								"variable": "timeCounter",
-								"value": "timeSession"
+								"value": "timeBreak*60000"
 							}
 						},
 						{
@@ -299,10 +294,10 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "tx_session_timer",
-							"sid": 623231042685300,
+							"objectClass": "tx_timeSession",
+							"sid": 313086210684098,
 							"parameters": {
-								"text": " zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
+								"text": "int(timeSession/60000% 60) & \":\" & zeropad(int(timeSession/1000%60), 2)"
 							}
 						},
 						{
@@ -337,7 +332,7 @@
 						},
 						{
 							"id": "set-position",
-							"objectClass": "tx_session_timer",
+							"objectClass": "tx_timeSession",
 							"sid": 543194839092588,
 							"parameters": {
 								"x": "DC_bar.X+DC_bar.Width-40",
@@ -378,24 +373,23 @@
 							}
 						},
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 852668980450283,
+							"id": "compare-instance-variable",
+							"objectClass": "sp_bt_start",
+							"sid": 298133312171853,
 							"parameters": {
-								"variable": "btStartStop",
+								"instance-variable": "startStop",
 								"comparison": 0,
-								"value": "\"Stopped\""
+								"value": "\"Stop\""
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 414109273814196,
+							"id": "set-animation-frame",
+							"objectClass": "sp_bt_start",
+							"sid": 539403414715313,
 							"parameters": {
-								"variable": "Timer_SSC",
-								"value": "time"
+								"frame-number": "1"
 							}
 						},
 						{
@@ -408,14 +402,6 @@
 							}
 						},
 						{
-							"id": "set-animation-frame",
-							"objectClass": "sp_bt_start",
-							"sid": 212855474455904,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 971931181955557,
@@ -424,12 +410,12 @@
 							}
 						},
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 353588696307032,
+							"id": "set-instvar-value",
+							"objectClass": "sp_bt_start",
+							"sid": 254686495827942,
 							"parameters": {
-								"variable": "btStartStop",
-								"value": "\"Started\""
+								"instance-variable": "startStop",
+								"value": "\"Start\""
 							}
 						}
 					],
@@ -447,26 +433,17 @@
 							}
 						},
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 552285081716057,
+							"id": "compare-instance-variable",
+							"objectClass": "sp_bt_start",
+							"sid": 164635591368471,
 							"parameters": {
-								"variable": "btStartStop",
+								"instance-variable": "startStop",
 								"comparison": 0,
-								"value": "\"Started\""
+								"value": "\"Start\""
 							}
 						}
 					],
 					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 779029007942876,
-							"parameters": {
-								"variable": "switch",
-								"value": "\"\""
-							}
-						},
 						{
 							"id": "set-animation-frame",
 							"objectClass": "sp_bt_start",
@@ -478,19 +455,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 734932573529230,
-							"parameters": {
-								"variable": "btStartStop",
-								"value": "\"Stopped\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
 							"sid": 657811033820855,
 							"parameters": {
 								"variable": "switch",
 								"value": "\"Stopped\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "sp_bt_start",
+							"sid": 806727607943172,
+							"parameters": {
+								"instance-variable": "startStop",
+								"value": "\"Stop\""
 							}
 						}
 					],
@@ -534,6 +511,24 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 339538980942578,
+									"parameters": {
+										"variable": "timeInitial",
+										"value": "Date.Now"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 132538109316187,
+									"parameters": {
+										"variable": "timeTarget",
+										"value": "Date.Now+timeSession"
+									}
+								},
+								{
 									"id": "set-text",
 									"objectClass": "tx_session_counter",
 									"sid": 837097237528606,
@@ -571,15 +566,85 @@
 									],
 									"actions": [
 										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 828783889780587,
+											"parameters": {
+												"variable": "timeElapsed",
+												"value": "Date.Now-timeInitial"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 243775363579943,
+											"parameters": {
+												"variable": "timeRemaining",
+												"value": "(timeTarget-timeInitial)-timeElapsed"
+											}
+										},
+										{
 											"id": "set-width",
 											"objectClass": "DC_bar",
-											"sid": 265918082815293,
+											"sid": 187108236695926,
 											"parameters": {
-												"width": "barInitialWidth+((time-Timer_SSC)*(barFullWidth-barInitialWidth)/30)"
+												"width": "barInitialWidth+(timeElapsed*(barFullWidth-barInitialWidth)/timeSession)"
 											}
 										}
 									],
 									"sid": 415918907818455
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 503275213873441,
+											"parameters": {
+												"first-value": "timeRemaining",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "tx_timeSession",
+											"sid": 347756194898297,
+											"parameters": {
+												"text": "int(timeRemaining/60000 % 60) & \":\" & zeropad(int(timeRemaining/1000%60), 2)"
+											}
+										}
+									],
+									"sid": 699571309927252
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 366390859856843,
+											"parameters": {
+												"variable": "timeElapsed",
+												"comparison": 4,
+												"value": "timeTarget-timeInitial"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "DC_bar",
+											"sid": 329090104180894,
+											"parameters": {
+												"width": "barFullWidth"
+											}
+										}
+									],
+									"sid": 184558960966520
 								}
 							]
 						},
@@ -589,9 +654,9 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 929103818922961,
+									"sid": 955952334151734,
 									"parameters": {
-										"variable": "timeCounter",
+										"variable": "timeRemaining",
 										"comparison": 3,
 										"value": "0"
 									}
@@ -620,30 +685,6 @@
 								}
 							],
 							"sid": 310606284409464
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "tx_session_timer",
-									"sid": 573044731132424,
-									"parameters": {
-										"text": " zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 961723537040025,
-									"parameters": {
-										"variable": "timeCounter",
-										"value": "min(timeSession+1,timeCounter-dt)"
-									}
-								}
-							],
-							"sid": 672126664394417
 						}
 					]
 				}
@@ -685,38 +726,30 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 479136075334943,
+									"parameters": {
+										"variable": "timeInitial",
+										"value": "Date.Now"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 823803381489415,
+									"parameters": {
+										"variable": "timeTarget",
+										"value": "Date.Now+timeBreak"
+									}
+								},
+								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 190866662521269,
 									"parameters": {
 										"variable": "sessionCounter",
 										"value": "1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 366922780781951,
-									"parameters": {
-										"variable": "widthIncreaser",
-										"value": "(barFullWidth-barInitialWidth)/timeBreak"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 634329472408969,
-									"parameters": {
-										"variable": "timeCounter",
-										"value": "timeBreak+1"
-									}
-								},
-								{
-									"id": "set-width",
-									"objectClass": "DC_bar",
-									"sid": 526043505311826,
-									"parameters": {
-										"width": "barInitialWidth-widthIncreaser"
 									}
 								},
 								{
@@ -734,25 +767,110 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-x-seconds",
+									"id": "every-tick",
 									"objectClass": "System",
-									"sid": 353393566594408,
-									"parameters": {
-										"interval-seconds": "1"
-									}
+									"sid": 795418781132613
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 579316717442338,
+							"children": [
 								{
-									"id": "set-width",
-									"objectClass": "DC_bar",
-									"sid": 401859000660568,
-									"parameters": {
-										"width": "Self.Width+widthIncreaser"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-width",
+											"objectClass": "DC_bar",
+											"sid": 531364658601518,
+											"parameters": {
+												"comparison": 3,
+												"width": "barFullWidth"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 734247824948649,
+											"parameters": {
+												"variable": "timeElapsed",
+												"value": "Date.Now-timeInitial"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 535102817375668,
+											"parameters": {
+												"variable": "timeRemaining",
+												"value": "(timeTarget-timeInitial)-timeElapsed"
+											}
+										},
+										{
+											"id": "set-width",
+											"objectClass": "DC_bar",
+											"sid": 628440390736992,
+											"parameters": {
+												"width": "barInitialWidth+(timeElapsed*(barFullWidth-barInitialWidth)/timeBreak)"
+											}
+										}
+									],
+									"sid": 135663323653111
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 657697130740725,
+											"parameters": {
+												"first-value": "timeRemaining",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "tx_timeSession",
+											"sid": 729869831863625,
+											"parameters": {
+												"text": "int(timeRemaining/60000 % 60) & \":\" & zeropad(int(timeRemaining/1000%60), 2)"
+											}
+										}
+									],
+									"sid": 997239797772967
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 874869410454149,
+											"parameters": {
+												"variable": "timeElapsed",
+												"comparison": 4,
+												"value": "timeTarget-timeInitial"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "DC_bar",
+											"sid": 582723723691493,
+											"parameters": {
+												"width": "barFullWidth"
+											}
+										}
+									],
+									"sid": 512571711890438
 								}
-							],
-							"sid": 396230019081054
+							]
 						},
 						{
 							"eventType": "block",
@@ -760,9 +878,9 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 368228948471975,
+									"sid": 329120118982918,
 									"parameters": {
-										"variable": "timeCounter",
+										"variable": "timeRemaining",
 										"comparison": 3,
 										"value": "0"
 									}
@@ -791,30 +909,6 @@
 								}
 							],
 							"sid": 630859208611167
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-text",
-									"objectClass": "tx_session_timer",
-									"sid": 441986115704922,
-									"parameters": {
-										"text": "zeropad(int(timeCounter/60% 60), 1) & \":\" & zeropad(int(timeCounter%60), 2)"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 295301598875653,
-									"parameters": {
-										"variable": "timeCounter",
-										"value": "min(timeBreak+1,timeCounter-dt)"
-									}
-								}
-							],
-							"sid": 963804204856689
 						}
 					]
 				}
@@ -844,15 +938,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 714988716616887,
-							"parameters": {
-								"variable": "timeCounter",
-								"value": "timeSession+1"
-							}
-						},
-						{
 							"id": "set-width",
 							"objectClass": "DC_bar",
 							"sid": 870934131340883,
@@ -870,10 +955,10 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "tx_session_timer",
-							"sid": 803869475462453,
+							"objectClass": "tx_timeSession",
+							"sid": 213065466756970,
 							"parameters": {
-								"text": " zeropad(int(timeSession/60% 60), 1) & \":\" & zeropad(int(timeSession%60), 2)"
+								"text": "int(timeSession/60000% 60) & \":\" & zeropad(int(timeSession/1000%60), 2)"
 							}
 						}
 					],
@@ -890,7 +975,7 @@
 					"objectClass": "Touch",
 					"sid": 391737741066577,
 					"parameters": {
-						"object": "Sprite"
+						"object": "sp_close"
 					}
 				}
 			],
