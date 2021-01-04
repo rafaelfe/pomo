@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 22900,
-	"name": "pomo-beta",
+	"name": "pomo",
 	"runtime": "c3",
 	"useWorker": "dom",
 	"bundleAddons": true,
