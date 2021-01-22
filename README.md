@@ -10,12 +10,12 @@ I decided to develop pomo because I was not satisfied with other pomodoro apps, 
 
 ## How to install
 macOS: 
-• Download the latest stable release here
-• Unzip it, 
-• Enable third-party applications on the System Settings, 
-• Right-click to open. 
-• Right-click to open again. 
-• Move it to the Applications folder and enjoy.
+* Download the latest stable release here
+* Unzip it, 
+* Enable third-party applications on the System Settings, 
+* Right-click to open. 
+* Right-click to open again. 
+* Move it to the Applications folder and enjoy.
 
 ## How to build
 ## Roadmap
