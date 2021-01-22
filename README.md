@@ -18,7 +18,7 @@ macOS:
 * Double-click to open.
 * As I'm not an [identified Apple Developer](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac), a warning message will appear.
 * Dismiss/Cancel the warning message.
-* Right-click -> "Open" to open it again.
+* Right-click → Open.
 * Click again "Open" on the next warning message.
 * Move it to the Applications folder and enjoy.
 
