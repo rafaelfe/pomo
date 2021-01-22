@@ -19,7 +19,7 @@ Tested on macOS Catalina:
 * As I'm not an [identified Apple Developer](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac), a warning message will appear.
 * Dismiss/Cancel the warning message.
 * Right-click → Open.
-* Click again "Open" on the next warning message.
+* Click "Open" again on the next warning message.
 * Move it to the Applications folder and enjoy.
 
 Any questions or feedback please write me on [Twitter](https://twitter.com/rafaelfe) or via email r(at)rafaelfe.com.
