@@ -14,12 +14,12 @@ I decided to develop pomo because I was not satisfied with other pomodoro apps, 
 ## How to install
 macOS: 
 * Download the latest stable release [here](https://github.com/rafaelfe/pomo/releases/download/1.0/pomo.macOS.v1.0.zip).
-* Unzip it, 
-* Enable third-party applications on the System Settings:
-** Go to macOS System Settings -> Security & Privacy -> General tab -> Allow apps downloaded from: Appstore
-* Right-click to open. 
-* Right-click to open again. 
+* Unzip it. 
+* Double-click to open.
+* As I'm not an [identified Apple Developer](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac), a warning message will appear.
+* Dismiss/Cancel the warning message.
+* Right-click to open again.
+* Click "Open" on the next warning message.
 * Move it to the Applications folder and enjoy.
 
-## How to build
-## Roadmap
+Any questions or feedback please write me on [Twitter](https://twitter.com/rafaelfe) or via email r(at)rafaelfe.com.
