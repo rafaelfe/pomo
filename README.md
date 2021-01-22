@@ -15,7 +15,8 @@ I decided to develop pomo because I was not satisfied with other pomodoro apps, 
 macOS: 
 * Download the latest stable release [here](https://github.com/rafaelfe/pomo/releases/download/1.0/pomo.macOS.v1.0.zip).
 * Unzip it, 
-* Enable third-party applications on the System Settings, 
+* Enable third-party applications on the System Settings:
+** Go to macOS System Settings -> Security & Privacy -> General tab -> Allow apps downloaded from: Appstore
 * Right-click to open. 
 * Right-click to open again. 
 * Move it to the Applications folder and enjoy.
