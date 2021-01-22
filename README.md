@@ -12,7 +12,7 @@ By default, the app runs "Always on top" meaning that it will always be visible 
 I decided to develop pomo because I was not satisfied with other pomodoro apps, due to the fact that they offer too many features, have big layouts and don't always stay visible on screen.
 
 ## How to install
-macOS: 
+Tested on macOS Catalina: 
 * Download the latest stable release [here](https://github.com/rafaelfe/pomo/releases/download/1.0/pomo.macOS.v1.0.zip).
 * Unzip it. 
 * Double-click to open.
