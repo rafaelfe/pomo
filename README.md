@@ -1,3 +1,6 @@
+![pomo screenshot](https://raw.githubusercontent.com/rafaelfe/pomo/master/pomo%20screenshot.png)
+
+
 # pomo
 A minimalistic pomodoro app
 
