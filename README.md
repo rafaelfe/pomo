@@ -21,5 +21,3 @@ Tested on macOS Catalina:
 * Right-click → Open.
 * Click "Open" again on the next warning message.
 * Move it to the Applications folder and enjoy.
-
-Any questions or feedback please write me on [Twitter](https://twitter.com/rafaelfe) or via email r(at)rafaelfe.com.
